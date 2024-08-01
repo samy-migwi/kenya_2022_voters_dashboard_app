@@ -12,9 +12,9 @@ server = app.server
 app.title = "2022 Kenya VoterData Dashboard"
 # Data importing
 #voters data
-df=pd.read_csv("https://raw.githubusercontent.com/samy-migwi/kenya_2022_voters_dashboard_app/data/voters.csv")
+df=pd.read_csv("https://raw.githubusercontent.com/samy-migwi/kenya_2022_voters_dashboard_app/main/data/voters.csv")
 #geojson of subcounties
-subgeo=gpd.read_file("https://raw.githubusercontent.com/samy-migwi/kenya_2022_voters_dashboard_app/data/map.geojson")
+subgeo=gpd.read_file("https://raw.githubusercontent.com/samy-migwi/kenya_2022_voters_dashboard_app/main/data/map.geojson")
 #geojson of subcounties
 #data wrangling
 df.drop(columns="Unnamed: 0", inplace=True)
