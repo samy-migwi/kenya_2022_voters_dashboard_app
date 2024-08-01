@@ -10,17 +10,12 @@ import geopandas as gpd
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 app.title = "2022 Kenya VoterData Dashboard"
-
 # Data importing
 #voters data
-
 df=pd.read_csv("https://raw.githubusercontent.com/YonQwon/kenya_2022_voters_dashboard_app/data/voters.csv")
-subgeo=gpd.read_file("https://raw.githubusercontent.com/YonQwon/kenya_2022_voters_dashboard_app/data/map.geojson")
-
-#df=pd.read_csv(r"C:\Users\Qwon\Desktop\Dev\data_science_projects\voters_dashboard\data\voters.csv")
 #geojson of subcounties
-#subgeo=gpd.read_file(r"C:\Users\Qwon\Desktop\Dev\data_science_projects\voters_dashboard\data\map.geojson")
-
+subgeo=gpd.read_file("https://raw.githubusercontent.com/YonQwon/kenya_2022_voters_dashboard_app/data/map.geojson")
+#geojson of subcounties
 #data wrangling
 df.drop(columns="Unnamed: 0", inplace=True)
 
